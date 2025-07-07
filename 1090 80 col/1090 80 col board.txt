@@ -1,0 +1,35 @@
+1090 XL Expansion Box - 80 column card
+---------------------------------------------------
+
+General information about the card and associated files...
+
+Board contains a MMI PAL20L10. Actual markings on the chip are as follows:
+PAL20L10CJS
+8411  V80C11 (V80C11 is written by hand in white marker).
+
+The file "exp80.jed" can be viewed in notepad and is the jedec file that was read from the PAL.
+
+The file "exp80g.jed is a GAL conversion of the PAL chip to be written to a G20XV10. It was created by the:
+PAL to GAL JEDEC conversion utility - paltogal v3.12  17 November 1992
+Copyright (c) by LATTICE Semiconductor Corp. 1990, 1991, 1992.
+
+Also included for ease of reference is the MMI PAL20L10 spec. In addition the 1988 AMD PAL Device Handbook.
+http://www.bitsavers.org/components/amd/_dataBooks/1988_AMD_PAL_Device_Handbook.pdf
+
+-----------------
+Eproms - 
+
+The file "80 col charset.bin" is at location U20. The original chip is a D2716 and the label looks like it says:
+"58AE chrset" however the label is very sloppy. The A in checksum(?) looks very weird almost like it could
+also be 58FUE. This eprom dumps with a checksum of A752. Verified on both readers I have.
+This board hasn't been handled or exposed to light so it's my belief that the chip is valid and hasn't degraded.
+Possible the label was wrong or not updated. Hard to say.
+
+The file "80 col os rev9.bin" is at location U3. The original chip is a AM9716 eeprom and label says:
+"E02F Rev. 9". This eprom dumped and checksum matched what is on the label.
+
+There is a square 8 position switch at S1. This switch is set at position 3. Interesting that this switch has
+traces going to the Rev. 9 eeprom chip. Not sure what it's purpose is.
+
+There is a 3 pin jumper  next to the chrset eprom with center pin going to pin 19 of the chip.
+One side is marked +5V and the other is GND. The jumper is set to GND.
